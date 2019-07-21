@@ -3,9 +3,6 @@ import useProducts from './hooks/useProducts'
 import SizeFilter from './SizeFilter'
 import Product from './Product'
 
-import logo from './logo.svg'
-import './App.css'
-
 function App() {
   const [products, isLoading] = useProducts()
   const [selectedSize, setSize] = useState('')
@@ -21,10 +18,7 @@ function App() {
     : products
 
   return isLoading ? (
-    <div>
-      <img src={logo} className="App-logo" alt="logo" />
-      LOADERING...
-    </div>
+    <div>LOADERING...</div>
   ) : (
     <div>
       <header>

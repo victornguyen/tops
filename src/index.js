@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import { Normalize } from 'styled-normalize'
 import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <Fragment>
+    <Normalize />
+    <App />
+  </Fragment>,
+  document.getElementById('root')
+)
