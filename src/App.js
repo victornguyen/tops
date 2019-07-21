@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import useProducts from './hooks/useProducts'
 import SizeFilter from './SizeFilter'
+import Product from './Product'
 
 import logo from './logo.svg'
 import './App.css'
@@ -31,10 +32,15 @@ function App() {
         <SizeFilter size={selectedSize} onChange={handleSizeFilter} />
       </header>
       <main>
-        {filteredProducts.map(({ index, productName, price }) => (
-          <div key={index}>
-            {productName} {price}
-          </div>
+        {filteredProducts.map(product => (
+          <Product
+            key={product.index}
+            name={product.productName}
+            price={product.price}
+            image={product.productImage}
+            isSale={product.isSale}
+            isExclusive={product.isExclusive}
+          />
         ))}
       </main>
     </div>
