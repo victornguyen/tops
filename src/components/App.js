@@ -5,6 +5,7 @@ import useProducts from '../hooks/useProducts'
 
 import Header from './Header'
 import Listing from './Listing'
+import Loading from './Loading'
 
 const Container = styled.div`
   width: 100%;
@@ -36,7 +37,7 @@ function App() {
         size={selectedSize}
         onSizeChange={handleSizeFilter}
       />
-      {isLoading ? 'LOADERING' : <Listing products={filteredProducts} />}
+      {isLoading ? <Loading /> : <Listing products={filteredProducts} />}
     </Container>
   )
 }

@@ -9,6 +9,7 @@ import SizeFilter from './SizeFilter'
 const Container = styled.header`
   background: #def2f3;
   padding: 10px 15px;
+  margin-bottom: 10px;
   text-align: center;
   @media (min-width: ${sizes.viewport4}) {
     display: flex;

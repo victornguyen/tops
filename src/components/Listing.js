@@ -8,7 +8,6 @@ import Product from './Product'
 const List = styled.main`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
   border-top: 1px solid #e1e1e1;
   border-left: 1px solid #e1e1e1;
 `
