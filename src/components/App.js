@@ -17,7 +17,7 @@ const Container = styled.div`
   }
 `
 
-function App() {
+const App = () => {
   const [products, isLoading, error] = useProducts()
   const [selectedSize, setSize] = useState('')
 
