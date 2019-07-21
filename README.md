@@ -14,6 +14,7 @@ $ npm start
 
 ## Development notes
 
+- The provided API endpoint is currently returning 403. Have written the app to use mock data when the endpoint responds with an error. This logic is in `src/hooks/useProducts.js`
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app) to get a quick scaffold
 - Used [axios](https://github.com/axios/axios) to help with data fetching (we get JSON parsing for free amongst other benefits)
 - Used a custom hook to fetch the product data and manage loading and error state
@@ -21,6 +22,5 @@ $ npm start
 
 ## Roadmap / wishlist
 - Skeleton screens during loading to increased perceived speed
-- Error state when data fetch fails (the hook catches a failed fetch and returns an `isError` value, just need to setup UI for it)
 - Ensure the size filter is accessible
 - E2E component testing

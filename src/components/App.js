@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import styled from 'styled-components'
 import sizes from '../styles/sizes'
 import useProducts from '../hooks/useProducts'
@@ -6,6 +6,7 @@ import useProducts from '../hooks/useProducts'
 import Header from './Header'
 import Listing from './Listing'
 import Loading from './Loading'
+import Notice from './Notice'
 
 const Container = styled.div`
   width: 100%;
@@ -17,7 +18,7 @@ const Container = styled.div`
 `
 
 function App() {
-  const [products, isLoading] = useProducts()
+  const [products, isLoading, error] = useProducts()
   const [selectedSize, setSize] = useState('')
 
   // Size filter change handler
@@ -37,7 +38,19 @@ function App() {
         size={selectedSize}
         onSizeChange={handleSizeFilter}
       />
-      {isLoading ? <Loading /> : <Listing products={filteredProducts} />}
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <Fragment>
+          {error.instance && (
+            <Notice>
+              Products API responded with: <strong>{error.message}</strong>.
+              Falling back to mock data.
+            </Notice>
+          )}
+          <Listing products={filteredProducts} />
+        </Fragment>
+      )}
     </Container>
   )
 }
