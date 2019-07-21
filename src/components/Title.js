@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import sizes from './styles/sizes'
+import sizes from '../styles/sizes'
 
 export default styled.h1`
   font-size: calc(16px + 2vw);

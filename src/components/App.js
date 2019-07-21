@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import useProducts from './hooks/useProducts'
+import useProducts from '../hooks/useProducts'
 
 import Header from './Header'
 import Product from './Product'
 
-import sizes from './styles/sizes'
+import sizes from '../styles/sizes'
 
 const Container = styled.div`
   width: 100%;

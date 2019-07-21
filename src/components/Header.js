@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import sizes from './styles/sizes'
+import sizes from '../styles/sizes'
 
 import Title from './Title'
 import SizeFilter from './SizeFilter'
