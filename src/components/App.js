@@ -33,7 +33,7 @@ function App() {
   return (
     <Container>
       <Header
-        title="Women&rsquo;s tops"
+        title="Women&rsquo;s tops 👚"
         size={selectedSize}
         onSizeChange={handleSizeFilter}
       />
