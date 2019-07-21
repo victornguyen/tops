@@ -8,8 +8,11 @@ https://victornguyen.github.io/tops
 To run locally:
 
 ```sh
-$ npm i
-$ npm start
+$ yarn
+$ yarn start
+
+# You could also npm i && npm start if you prefer.
+# Visit http://localhost:3000/
 ```
 
 ## Development notes
