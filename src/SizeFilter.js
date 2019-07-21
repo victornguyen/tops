@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const SizeFilter = ({ size, onChange }) => (
-  <select value={size} onChange={onChange}>
+const SizeFilter = ({ size, onChange, ...rest }) => (
+  <select value={size} onChange={onChange} {...rest}>
     <option value="">Filter by size</option>
     <option value="XS">XS</option>
     <option value="S">S</option>

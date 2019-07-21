@@ -1,7 +1,20 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import useProducts from './hooks/useProducts'
-import SizeFilter from './SizeFilter'
+
+import Header from './Header'
 import Product from './Product'
+
+import sizes from './styles/sizes'
+
+const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  @media (min-width: ${sizes.viewport4}) {
+    width: 90%;
+    margin: 20px auto;
+  }
+`
 
 function App() {
   const [products, isLoading] = useProducts()
@@ -20,11 +33,12 @@ function App() {
   return isLoading ? (
     <div>LOADERING...</div>
   ) : (
-    <div>
-      <header>
-        Women&rsquo;s tops
-        <SizeFilter size={selectedSize} onChange={handleSizeFilter} />
-      </header>
+    <Container>
+      <Header
+        title="Women's tops"
+        size={selectedSize}
+        onSizeChange={handleSizeFilter}
+      />
       <main>
         {filteredProducts.map(product => (
           <Product
@@ -37,7 +51,7 @@ function App() {
           />
         ))}
       </main>
-    </div>
+    </Container>
   )
 }
 
