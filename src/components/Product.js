@@ -61,7 +61,7 @@ const Flag = styled.div`
 
 const Product = ({ name, price, image, isSale, isExclusive, ...rest }) => (
   <Container {...rest}>
-    <Image src={`/images/${image}`} alt={name} />
+    <Image src={`images/${image}`} alt={name} />
     <FlagContainer>
       {isSale && <Flag isSale>Sale</Flag>}
       {isExclusive && <Flag isExclusive>Exclusive</Flag>}
