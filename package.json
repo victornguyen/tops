@@ -1,6 +1,7 @@
 {
-  "name": "topstopstops",
+  "name": "tops",
   "version": "0.1.0",
+  "homepage": "https://victornguyen.github.io/tops",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
@@ -17,7 +18,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "pretty-check": "prettier --check src/**/*.js",
-    "pretty-format": "prettier --write src/**/*.js"
+    "pretty-format": "prettier --write src/**/*.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +40,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.18.2"
   }
 }
